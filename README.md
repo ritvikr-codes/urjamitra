@@ -3,6 +3,7 @@
 ### Low-cost energy intelligence for Indian small and medium-sized manufacturers
 
 **Schneider Electric Hackathon 2026 — Smart Manufacturing: Industrial Energy & Process Efficiency**
+**Challenge: Smart Manufacturing — Industrial Energy & Process Efficiency**
 
 > **Measure → Understand → Act**
 
@@ -234,6 +235,37 @@ For planning and pilot deployment, UrjaMitra assumes **5–10% savings**. Real s
 │  Operator → Alerts / Actions        │
 │  Exporter → Carbon data             │
 └─────────────────────────────────────┘
+```
+
+The current application is a software simulation. In a production deployment, UrjaMitra can operate as an energy-intelligence layer connected to industrial equipment.
+
+```mermaid
+flowchart LR
+    A[Industrial Equipment] --> B[Energy & Condition Sensors]
+
+    B --> C[Edge Gateway]
+    C --> D[Data Validation & Aggregation]
+
+    D --> E[UrjaMitra Cloud Platform]
+
+    E --> F[Energy Baseline & SEC Engine]
+    E --> G[Anomaly & Predictive Maintenance Engine]
+    E --> H[Tariff Optimisation Engine]
+    E --> I[Carbon & Emissions Engine]
+    E --> J[ROI & Savings Engine]
+
+    F --> K[UrjaMitra Dashboard]
+    G --> K
+    H --> K
+    I --> K
+    J --> K
+
+    K --> L[Plant Manager / Operator]
+
+    K --> M[Recommended Actions]
+    M --> N[Maintenance / Scheduling / Process Optimisation]
+
+    E <--> O[ERP / Production Data]
 ```
 
 ### Data flow
